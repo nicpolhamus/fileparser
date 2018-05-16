@@ -7,7 +7,11 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build-ts && npm run tslint",
+    "test": "jest --forceExit --coverage --verboxe",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -25,8 +29,12 @@
   },
   "homepage": "https://github.com/nicpolhamus/fileparser#readme",
   "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.1.0",
     "chai": "^4.1.2",
-    "mocha": "^5.1.1",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
     "typescript": "^2.8.3"
   }
 }
