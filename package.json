@@ -1,0 +1,32 @@
+{
+  "name": "fileparser",
+  "version": "0.0.1",
+  "description": "A highly configurable file parser (at least it is planned to be)!",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicpolhamus/fileparser.git"
+  },
+  "keywords": [
+    "file",
+    "parser",
+    "fileparser"
+  ],
+  "author": "Nicolas Polhamus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicpolhamus/fileparser/issues"
+  },
+  "homepage": "https://github.com/nicpolhamus/fileparser#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "typescript": "^2.8.3"
+  }
+}
