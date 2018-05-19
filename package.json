@@ -1,26 +1,20 @@
 {
   "name": "fileparser",
   "version": "0.0.1",
-  "description": "A highly configurable file parser (at least it is planned to be)!",
-  "main": "dist/index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "description": "A highly configurable file parser. Early alpha development right now.",
+  "main": "index.js",
   "scripts": {
-    "build": "npm run build-ts && npm run tslint",
-    "test": "jest --forceExit --coverage --verboxe",
-    "build-ts": "tsc",
-    "watch-ts": "tsc -w",
-    "tslint": "tslint -c tslint.json -p tsconfig.json"
+    "build": "./node_modules/.bin/babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nicpolhamus/fileparser.git"
   },
   "keywords": [
+    "fileparser",
     "file",
-    "parser",
-    "fileparser"
+    "parser"
   ],
   "author": "Nicolas Polhamus",
   "license": "MIT",
@@ -29,12 +23,8 @@
   },
   "homepage": "https://github.com/nicpolhamus/fileparser#readme",
   "devDependencies": {
-    "@types/jest": "^22.2.3",
-    "@types/node": "^10.1.0",
-    "chai": "^4.1.2",
-    "jest": "^22.4.3",
-    "ts-jest": "^22.4.6",
-    "tslint": "^5.10.0",
-    "typescript": "^2.8.3"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^22.4.4"
   }
 }
