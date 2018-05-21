@@ -4,7 +4,9 @@
   "description": "A highly configurable file parser. Early alpha development right now.",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel src -d lib",
+    "build": "npm run lint && npm run build-babel",
+    "build-babel": "./node_modules/.bin/babel src -d lib",
+    "lint": "eslint ./src/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +26,12 @@
   "homepage": "https://github.com/nicpolhamus/fileparser#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
     "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
     "jest": "^22.4.4"
+  },
+  "dependencies": {
+    "npm": "^6.0.1"
   }
 }
