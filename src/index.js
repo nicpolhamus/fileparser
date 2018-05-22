@@ -30,13 +30,16 @@ export class FileParser extends Transform {
         let fileDataChunkString = String(fileDataChunk);
         fileDataChunkString = fileDataChunkString.trim();
         /* check if fileDataChunk has spaces */
-        const fileDataChunkHasSpaces = fileDataChunkString.includes(' ');
-        if (fileDataChunkHasSpaces) {
+        if (this.hasDelimiters(fileDataChunkString)) {
             /* return fileData after it has been split on spaces */
-            return fileDataChunkString.split(' ');
+            return fileDataChunkString.split(/[\s,\t]+/);
         } else {
             /* fileDataChunk has no spaces, so return the string form of fileDataChunk */
             return fileDataChunkString;
         }
+    }
+
+    hasDelimiters(lineOfFileData) {
+        return lineOfFileData.search(/[\s,\t]/);
     }
 }
